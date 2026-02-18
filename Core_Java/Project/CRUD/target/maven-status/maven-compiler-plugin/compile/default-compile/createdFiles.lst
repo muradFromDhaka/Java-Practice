@@ -1,0 +1,6 @@
+com\abc\crud\CRUD.class
+com\abc\crud\Main.class
+com\abc\crud\service\StudentService.class
+com\abc\crud\dao\DatabaseHelper.class
+com\abc\crud\repository\DatabaseConnection.class
+com\abc\crud\entity\Student.class

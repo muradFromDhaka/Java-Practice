@@ -1,0 +1,45 @@
+<form [formGroup]="projectForm" (ngSubmit)="submit()">
+
+  <div>
+    <label>Project Title</label>
+    <input formControlName="projectTitle" type="text">
+    <div *ngIf="projectForm.get('projectTitle')?.touched && projectForm.get('projectTitle')?.invalid">
+      Title is required and max 200 characters
+    </div>
+  </div>
+
+  <div>
+    <label>Description</label>
+    <textarea formControlName="description"></textarea>
+  </div>
+
+  <div>
+    <label>Status</label>
+    <select formControlName="status">
+      <option *ngFor="let s of statusList" [value]="s">{{ s }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Submission Date</label>
+    <input formControlName="submissionDate" type="date">
+  </div>
+
+  <div>
+    <label>Upload New Documents</label>
+    <input type="file" (change)="onFileSelected($event)" multiple>
+  </div>
+
+  <div *ngIf="existingDocuments.length > 0">
+    <label>Existing Documents:</label>
+    <ul>
+      <li *ngFor="let doc of existingDocuments">
+        {{ doc }}
+        <button type="button" (click)="deleteDocument(doc)">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <button type="submit">{{ isEditMode ? 'Update' : 'Create' }} Project</button>
+</form>
+

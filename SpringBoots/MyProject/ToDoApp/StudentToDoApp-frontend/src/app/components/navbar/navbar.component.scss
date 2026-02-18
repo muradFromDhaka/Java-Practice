@@ -1,0 +1,36 @@
+.navbar {
+  background: #0d6efd; // Bootstrap primary color
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav-brand {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+
+    li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+
+      &:hover {
+        color: #dfe6fd;
+      }
+    }
+
+    .active a {
+      border-bottom: 2px solid white;
+      padding-bottom: 3px;
+    }
+  }
+}

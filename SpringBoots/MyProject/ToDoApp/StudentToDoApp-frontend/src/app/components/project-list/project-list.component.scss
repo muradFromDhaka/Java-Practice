@@ -1,0 +1,127 @@
+.project-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.5rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .documents {
+      margin: 10px 0;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); // 3 per row
+        gap: 10px;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 5px;
+
+          .doc-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+          }
+
+          a {
+            color: #007bff;
+            font-size: 0.9rem;
+            word-break: break-all;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          .btn-delete {
+            background-color: #e74c3c;
+            border: none;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            &:hover {
+              background-color: #c0392b;
+            }
+          }
+        }
+      }
+    }
+
+    .actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      .btn-edit {
+        background-color: #3498db;
+        border: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+          background-color: #2980b9;
+        }
+      }
+
+      .btn-delete {
+        background-color: #e74c3c;
+        border: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+          background-color: #c0392b;
+        }
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 1024px) {
+    .project-card .documents ul {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-card .documents ul {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-card .documents ul {
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
+  }
+}

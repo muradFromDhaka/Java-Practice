@@ -1,0 +1,36 @@
+<a routerLink="/form" routerLinkActive="active">Add Project</a>
+
+<div class="project-list-container">
+  <div class="project-card" *ngFor="let project of projects">
+    
+    <div class="project-content">
+      <h2>{{ project.projectTitle }}</h2>
+      <p class="description">{{ project.description || 'No description available.' }}</p>
+      <p><strong>Status:</strong> {{ project.status }}</p>
+      <p><strong>Submission Date:</strong> {{ project.submissionDate | date }}</p>
+
+      <div *ngIf="project.documents.length" class="documents">
+        <strong>Documents:</strong>
+        <ul>
+          <li *ngFor="let doc of project.documents">
+            <ng-container *ngIf="isImage(doc); else notImage">
+              <img [src]="doc" alt="Project Document" class="doc-image">
+            </ng-container>
+            <ng-template #notImage>
+              <a [href]="doc" target="_blank">{{ doc }}</a>
+            </ng-template>
+
+            <button type="button" (click)="deleteDocument(project.projectId!, doc)" class="btn btn-delete">
+              Delete
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <button  [routerLink]="['/edit', project.projectId]" (click)="editProject(project)" class="btn btn-edit">Edit</button>
+        <button (click)="deleteProject(project.projectId!)" class="btn btn-delete">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

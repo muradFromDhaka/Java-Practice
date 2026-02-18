@@ -1,0 +1,46 @@
+<div class="product-form">
+
+  <h2>{{ isEditMode ? 'Update Product' : 'Create Product' }}</h2>
+
+  <form [formGroup]="productForm" (ngSubmit)="submit()">
+
+    <div class="grid">
+      <input formControlName="name" placeholder="Product Name" />
+      <input type="number" formControlName="price" placeholder="Price" />
+      <input type="number" formControlName="discountPrice" placeholder="Discount Price" />
+      <input formControlName="sku" placeholder="SKU" />
+      <input type="number" formControlName="stockQuantity" placeholder="Stock Quantity" />
+    </div>
+
+    <textarea formControlName="description" placeholder="Description"></textarea>
+
+    <!-- Image Upload -->
+    <div class="image-section">
+      <label class="upload-box">
+        + Upload Images
+        <input type="file" multiple (change)="onImageSelect($event)" hidden />
+      </label>
+
+      <!-- Existing Images -->
+      <div class="image-grid" *ngIf="existingImages.length">
+        <div class="image-card" *ngFor="let img of existingImages; let i = index">
+          <img [src]="img" />
+          <button type="button" (click)="removeExistingImage(i)">✕</button>
+        </div>
+      </div>
+
+      <!-- New Images -->
+      <div class="image-grid">
+        <div class="image-card" *ngFor="let img of imagePreviews; let i = index">
+          <img [src]="img" />
+          <button type="button" (click)="removeNewImage(i)">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loading || productForm.invalid">
+      {{ loading ? 'Saving...' : 'Save Product' }}
+    </button>
+
+  </form>
+</div>
