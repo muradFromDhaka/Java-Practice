@@ -1,0 +1,47 @@
+Evidence Practice for Core Java
+
+1.	Find out the conditional Sum until input (-1). 
+2.	Print an Array and sum of the Array elements.
+3.	Print an 2d Array and sum of the Array elements.
+4.	Calculate factorial value of a number.
+5.	Check prime number using Scanner
+6.	Array Sorting ascending or descending order.
+7.	2d Array Sorting ascending or descending order.
+8.	Check the largest number among the three numbers.
+9.	Check the largest number from an array.
+10.	Retrieve Email address from a text field and validate whether “@” symbol available 
+11.	Find out the Max-Min number among n number of values.
+12.	Find out the ten unique Random numbers.
+13.	Check the odd or even number by giving input during runtime.
+14.	Create a class Student with properties id, name. Create an interface Human with abstract method exampleMethod(). Implement Human in class Student. Create an abstract class Pakna with a method searchThePakna(). Inherit Pakna in class Student.
+
+15.	Write sample code to handle exceptions with finally block.
+
+16.	Write a file and read from the file using Java NIO. Class 24
+17.	Write a file and read from the file using Binary I/O. Class 25
+18.	Write an example of Java Generics. Class 27
+19.	Write examples of Multithreading. Class 31
+
+
+
+--------------------------------------------------------------------------------------------------
+                                                                                                                                  
+1.	Check whether a number is prime or?                
+2.	Find out factorial value of 5?
+          
+3.	Write program that will accept three numbers by command prompt and print the lowest and highest numbers from them.
+
+4.	Find out grade number. If it is 60, he will get B, if it is 70, he will get A If it is 90, he will get A+ otherwise failed (F).
+
+
+-----------------------------------------------------------------------------------------------------------------------
+Question:-01: Find out the Fibonacci number.
+Question:-02: Find out the Factorial number from n values.
+Question:-03: Find out the Prime number from n values.
+Question:-04: Sort the Multidimensional Array.
+Question:-05: Sort the Array in Reverse order.
+Question:-06: Find out the Max-Min number among n number of values.
+Question:-07: Find out the ten unique Random Numbers.
+Question:-08: Find out the Conditional Sum until input 0(zero).
+Question:-09: Find out the Odd-even number among n number of values.
+Question:-10: Calculate the number with Power.

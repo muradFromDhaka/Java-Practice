@@ -1,0 +1,6 @@
+com\abc\crudtest\CRUDtest.class
+com\abc\crudtest\EmployeeMain.class
+com\abc\crudtest\entity\Employee.class
+com\abc\crudtest\repository\DatabaseConnectionTest.class
+com\abc\crudtest\Service\EmployeeService.class
+com\abc\crudtest\Service\Student.class

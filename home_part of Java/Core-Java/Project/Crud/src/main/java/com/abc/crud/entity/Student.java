@@ -1,0 +1,83 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.abc.crud.entity;
+
+import java.time.LocalDate;
+
+/**
+ *
+ * @author B-2
+ */
+public class Student {
+    private int id;
+    private String name;
+    private String email;
+    private int age;
+    private LocalDate dob;
+    
+    public Student(){}
+
+    public Student(String name, String email, int age, LocalDate dob) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.dob = dob;
+    }
+
+    public Student(int id, String name, int age, String email, LocalDate dob) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.dob = dob;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" + "id=" + id + ", name=" + name + ", email=" + email + ", age=" + age + ", dob=" + dob + '}';
+    }
+    
+    
+}
